@@ -10,7 +10,6 @@ import entidades.Horario;
 import entidades.Ruta;
 import java.awt.Color;
 import java.awt.Frame;
-import java.time.LocalTime;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
