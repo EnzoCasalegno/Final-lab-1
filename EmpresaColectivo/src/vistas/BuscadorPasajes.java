@@ -4,7 +4,6 @@ import accesoADatos.HorarioData;
 import accesoADatos.PasajeData;
 import accesoADatos.PasajeroData;
 import accesoADatos.RutaData;
-import entidades.Horario;
 import entidades.Pasaje;
 import entidades.Pasajero;
 import entidades.Ruta;
@@ -595,7 +594,7 @@ public class BuscadorPasajes extends javax.swing.JPanel {
         if(filtrador != null){
 
             if (filtros.isEmpty()) {
-                filtrador.setRowFilter(null); // No filters, show all rows
+                filtrador.setRowFilter(null);
             } else {
                 filtrador.setRowFilter(RowFilter.andFilter(filtros));
             }
