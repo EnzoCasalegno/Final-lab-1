@@ -295,7 +295,6 @@ public class CargaDePasajero extends javax.swing.JPanel {
     }//GEN-LAST:event_jBEditarActionPerformed
 
     private void jBLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimpiarActionPerformed
-        // TODO add your handling code here:
         limpiarCampos();
     }//GEN-LAST:event_jBLimpiarActionPerformed
 

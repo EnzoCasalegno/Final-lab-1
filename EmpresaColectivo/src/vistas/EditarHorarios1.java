@@ -2,10 +2,8 @@
 package vistas;
 
 import accesoADatos.HorarioData;
-import accesoADatos.PasajeroData;
 import accesoADatos.RutaData;
 import entidades.Horario;
-import entidades.Pasajero;
 import entidades.Ruta;
 import java.awt.Color;
 import java.sql.Time;
@@ -14,21 +12,13 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFormattedTextField;
 import javax.swing.JOptionPane;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerDateModel;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 
 
 public class EditarHorarios1 extends javax.swing.JDialog {
@@ -81,11 +71,6 @@ public class EditarHorarios1 extends javax.swing.JDialog {
         jCRuta.setEditable(true);
         jCRuta.setForeground(new java.awt.Color(102, 102, 102));
         jCRuta.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 153, 153)));
-        jCRuta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCRutaActionPerformed(evt);
-            }
-        });
 
         jLHorarioSalida.setBackground(new java.awt.Color(51, 51, 51));
         jLHorarioSalida.setForeground(new java.awt.Color(102, 102, 102));
@@ -104,11 +89,6 @@ public class EditarHorarios1 extends javax.swing.JDialog {
         jTHorarioLlegada.setEditable(false);
         jTHorarioLlegada.setBackground(new java.awt.Color(255, 255, 255));
         jTHorarioLlegada.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 153, 153)));
-        jTHorarioLlegada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTHorarioLlegadaActionPerformed(evt);
-            }
-        });
 
         jBGuardar.setBackground(new java.awt.Color(255, 255, 255));
         jBGuardar.setForeground(new java.awt.Color(102, 102, 102));
@@ -196,18 +176,9 @@ public class EditarHorarios1 extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCRutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCRutaActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jCRutaActionPerformed
-
     private void jSPHorarioSalidaStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSPHorarioSalidaStateChanged
 calcularLlegada();
     }//GEN-LAST:event_jSPHorarioSalidaStateChanged
-
-    private void jTHorarioLlegadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTHorarioLlegadaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTHorarioLlegadaActionPerformed
 
     private void jBGuardarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBGuardarMouseEntered
         jBGuardar.setBackground(new Color(0, 102, 102));
