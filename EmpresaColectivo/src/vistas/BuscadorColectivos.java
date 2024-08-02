@@ -1,24 +1,14 @@
 
 package vistas;
 import accesoADatos.ColectivoData;
-import dashboard.Dashboard;
 import entidades.Colectivo;
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Frame;
-import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
-import javax.swing.plaf.basic.BasicInternalFrameUI;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.*;
-import javax.swing.text.*;
 import vistas.ModificarColectivo;
 
 public class BuscadorColectivos extends javax.swing.JPanel {
