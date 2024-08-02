@@ -392,13 +392,6 @@ public class BuscadorRutas extends javax.swing.JPanel {
         jCDestino.setSelectedIndex(-1);
     }
 
-//    public void llenarDestinoOrigen(){
-//        jCDestino.removeAllItems();
-//        for (String des : listaDestinoporOrigen) {
-//            jCDestino.addItem(des);
-//        }
-//        
-//    }
     private void llenarTablas() {
         borrarFilas();
         listaRutas = rutaData.listarRutas();
