@@ -82,26 +82,26 @@ public class RutaData {
     }
     
 // BUSCO RUTA POR ORIGEN Y DESTINO ESPECIFICO //LO UTILIZO PARA BUSCAR EL HORARIO
-  public Ruta buscarRuta(String origen, String destino) {   
+  public List<Ruta>  buscarRuta(String origen, String destino) {   
         String sql = "SELECT * FROM ruta WHERE estado = 1 AND origen = ? AND destino = ?";
-        Ruta ruta = null;
+        List<Ruta> rutas = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, origen);
             ps.setString(2, destino);
             ResultSet rs = ps.executeQuery();
 
-            if (rs.next()) {
-                ruta = new Ruta();
+            while (rs.next()) {
+                Ruta ruta = new Ruta();
                 
                 ruta.setIdRuta(rs.getInt("id_ruta"));
                 ruta.setOrigen(rs.getString("origen"));
                 ruta.setDestino(rs.getString("destino"));
                 ruta.setDuracionEst(rs.getTime("duracion_estimada").toLocalTime());
                 ruta.setEstado(true);
+                
+                rutas.add(ruta);
                      
-            } else {
-                JOptionPane.showMessageDialog(null, "No existe esta ruta");
             }
             ps.close();
         } catch (SQLException ex) {
@@ -110,7 +110,7 @@ public class RutaData {
             e.printStackTrace();
              JOptionPane.showMessageDialog(null, "Error al llenar la tabla: " + e.getMessage());
     }
-        return ruta;
+        return rutas;
     }
     
     

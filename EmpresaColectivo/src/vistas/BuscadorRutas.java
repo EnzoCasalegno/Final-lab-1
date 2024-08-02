@@ -22,7 +22,7 @@ public class BuscadorRutas extends javax.swing.JPanel {
     List<Ruta> listaRutasporOrigen;
     List<Ruta> listaRutasporDestino;
     List<String> listaDestinoporOrigen;
-    Ruta rutasEspecificas = new Ruta();
+    List<Ruta> rutasEspecificas;
     List<Ruta> rutasOrigen;
     List<Ruta> rutasDestino;
 
@@ -302,12 +302,14 @@ public class BuscadorRutas extends javax.swing.JPanel {
             rutasEspecificas = rutaData.buscarRuta(origen, destino);
             if (rutasEspecificas != null) {
                 borrarFilas();
-                tabla.addRow(new Object[]{
-                    rutasEspecificas.getIdRuta(),
-                    rutasEspecificas.getOrigen(),
-                    rutasEspecificas.getDestino(),
-                    rutasEspecificas.getDuracionEst()
-                });
+                for (Ruta ruta : rutasEspecificas) {
+                    tabla.addRow(new Object[]{
+                        ruta.getIdRuta(),
+                        ruta.getOrigen(),
+                        ruta.getDestino(),
+                        ruta.getDuracionEst()
+                    });
+                }
             }
 
         }
