@@ -1,3 +1,13 @@
+/EmpresaColectivo/dist/
+/EmpresaColectivo/build/
+*project.properties
+private.properties
+/EmpresaDeColectivo_Grupo3/nbproject/private/
+/nbproject/private/
+private.xml
+/build/
+/dist/
+
 # Compiled class file
 *.class
 
@@ -22,3 +32,12 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+/eda-tp5-2-tad-arbol-binario/nbproject/private/
+EmpresaDeColectivo_Grupo3/nbproject/private/private.properties
+/EmpresaDeColectivo_Grupo3/build/
+/EmpresaDeColectivo_Grupo3/dist/
+/EmpresaColectivo/build/classes/vistas
+/EmpresaColectivo/nbproject/private/
+EmpresaColectivo/nbproject/project.properties
+*.properties
+/EmpresaColectivo/nbproject
